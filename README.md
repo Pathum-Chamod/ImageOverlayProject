@@ -36,6 +36,7 @@ Run the Program:
 bash
 Copy code
 java -cp .:okhttp-5.0.0-alpha.14.jar:gson-2.8.6.jar:okio-jvm-3.9.0.jar:kotlin-stdlib-1.9.23.jar DynamicImageOverlay
+
 Output 🎨
 The generated images with overlaid products and prices will be saved in the finalImages folder, ready for use!
 
