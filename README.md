@@ -3,6 +3,8 @@
 Overview ✨
 This project is a powerful Java-based tool that dynamically overlays transparent product images onto background images, while preserving transparency. It seamlessly integrates with the Amazon Price API to fetch real-time product prices based on ASINs (Amazon Standard Identification Numbers). The final images, complete with item overlays and pricing details, are saved in the finalImages directory.
 
+++++ IDE - Visual Studio Code +++
+
 Features 💡
 🔍 Transparent Image Handling: Effortlessly overlay transparent PNG images while maintaining their transparency.
 💸 Automated Price Fetching: Fetch product prices from the Amazon Price API using ASINs derived directly from image file names.
