@@ -1,46 +1,62 @@
-🌟 Dynamic Image Overlay with Price Fetching 🚀
+# Image Overlay Project using MS Excel (Without API)
 
-Overview ✨
-This project is a powerful Java-based tool that dynamically overlays transparent product images onto background images, while preserving transparency. It seamlessly integrates with the Amazon Price API to fetch real-time product prices based on ASINs (Amazon Standard Identification Numbers). The final images, complete with item overlays and pricing details, are saved in the finalImages directory.
+![Project Logo](https://via.placeholder.com/150)  <!-- Add an image link if you have a project logo -->
 
-++++ IDE - Visual Studio Code +++
+## Overview
+This Java project overlays item images onto background images, with item prices fetched from a local Excel file (`item_prices.xlsx`) instead of using APIs. The project is designed to work with transparent images and supports customization of item images and backgrounds.
 
-Features 💡
-🔍 Transparent Image Handling: Effortlessly overlay transparent PNG images while maintaining their transparency.
-💸 Automated Price Fetching: Fetch product prices from the Amazon Price API using ASINs derived directly from image file names.
-🛠️ Customizable Workflow: Easily adapt the project to different backgrounds, item images, and API configurations.
-How It Works 🛠️
-Backgrounds: Add your background images (JPG/PNG) to the backgrounds folder.
-Items: Place your transparent PNG product images, named after their respective ASINs, in the items folder.
-Execution: Run the Java program. It will:
-Overlay each item image onto the background.
-Fetch the corresponding product price using the ASIN.
-Save the final composite images in the finalImages folder.
-Prerequisites 📦
-Java (JDK 8 or higher)
-Dependencies:
-okhttp-5.0.0-alpha.14.jar
-gson-2.8.6.jar
-okio-jvm-3.9.0.jar
-kotlin-stdlib-1.9.23.jar
-Installation & Usage 🚀
-Clone the Repository:
+## Features
+- **Overlay Transparent Images**: Automatically scales and positions transparent item images onto backgrounds.
+- **Fetch Prices from Excel**: Reads item names and prices from `item_prices.xlsx`.
+- **Customizable**: Allows users to change item and background images.
+- **Uses Apache POI**: Leverages Apache POI libraries to interact with Excel files.
 
+## Requirements
+- **Java 8 or higher**
+- **Apache POI 4.1.2**
+- **Required JARs**:
+  - `poi-4.1.2.jar`
+  - `poi-ooxml-4.1.2.jar`
+  - `poi-ooxml-schemas-4.1.2.jar`
+  - `xmlbeans-3.1.0.jar`
+  - `commons-io-2.8.0.jar`
+  - `commons-collections4-4.4.jar`
+  - `log4j-api-2.23.1.jar`
+  - `log4j-core-2.23.1.jar`
+  - `commons-compress-1.18.jar`
 
-Compile the Project:
+## Installation
 
-bash
-Copy code
-javac -cp .:okhttp-5.0.0-alpha.14.jar:gson-2.8.6.jar:okio-jvm-3.9.0.jar:kotlin-stdlib-1.9.23.jar DynamicImageOverlay.java
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Pathum-Chamod/ImageOverlayProject.git
+    ```
 
-Run the Program:
+2. Navigate to the project directory:
+    ```bash
+    cd ImageOverlayProject
+    ```
 
-bash
-Copy code
-java -cp .:okhttp-5.0.0-alpha.14.jar:gson-2.8.6.jar:okio-jvm-3.9.0.jar:kotlin-stdlib-1.9.23.jar DynamicImageOverlay
+3. Compile the project:
+    ```bash
+    javac -cp .:poi-4.1.2.jar:poi-ooxml-4.1.2.jar:poi-ooxml-schemas-4.1.2.jar:xmlbeans-3.1.0.jar:commons-io-2.8.0.jar:commons-collections4-4.4.jar:log4j-api-2.23.1.jar:log4j-core-2.23.1.jar:commons-compress-1.18.jar DynamicImageOverlay.java
+    ```
 
-Output 🎨
-The generated images with overlaid products and prices will be saved in the finalImages folder, ready for use!
+4. Run the project:
+    ```bash
+    java -cp .:poi-4.1.2.jar:poi-ooxml-4.1.2.jar:poi-ooxml-schemas-4.1.2.jar:xmlbeans-3.1.0.jar:commons-io-2.8.0.jar:commons-collections4-4.4.jar:log4j-api-2.23.1.jar:log4j-core-2.23.1.jar:commons-compress-1.18.jar DynamicImageOverlay
+    ```
 
-License 📄
-This project is licensed under the MIT License. See the LICENSE file for details.
+## Usage
+- **Background Images**: Add your background images to the `backgrounds/` folder.
+- **Item Images**: Add your item images to the `items/` folder. Ensure the item image filenames match the item names in the `item_prices.xlsx` file.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+Feel free to reach out if you have any questions or need further assistance.
